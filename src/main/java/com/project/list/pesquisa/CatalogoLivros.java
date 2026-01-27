@@ -1,9 +1,13 @@
 package com.project.list.pesquisa;
 
+import lombok.NoArgsConstructor;
+import java.util.ArrayList;
+import java.util.List;
+
 @NoArgsConstructor
 public class CatalogoLivros {
 
-    private List<Livro> livroList;
+    private List<Livro> livroList = new ArrayList<>();
 
     public void adicionarLivro(String titulo, String autor, int anoPublicacao) {
         Livro livro = new Livro(titulo, autor, anoPublicacao);
