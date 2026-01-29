@@ -8,7 +8,7 @@ import java.util.Comparator;
 @AllArgsConstructor
 @Getter
 @ToString(callSuper = true)
-public class Pessoa {
+public class Pessoa implements Comparable<Pessoa> {
 
     private String name;
     private int idade;
@@ -16,7 +16,7 @@ public class Pessoa {
 
     @Override
     public int compareTo(Pessoa p) {
-        return this.name.compareTo(p.getName());
+        return Integer.compare(idade, p.getIdade());
     }
 
     @Override
@@ -26,5 +26,13 @@ public class Pessoa {
                 + ", idade=" + idade
                 + ", altura=" + altura
                 + '}';
+    }
+}
+
+class ComparatorPorAltura implements Comparator<Pessoa> {
+
+    @Override
+    public int compare(Pessoa p1, Pessoa p2) {
+        return Double.compare(p1.getAltura(), p2.getAltura());
     }
 }
