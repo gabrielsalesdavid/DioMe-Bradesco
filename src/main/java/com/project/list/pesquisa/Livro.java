@@ -6,7 +6,7 @@ import lombok.ToString;
 
 @AllArgsConstructor
 @Getter
-@ToString(CallSuper = true)
+@ToString(callSuper = true)
 public class Livro {
 
     private String titulo;

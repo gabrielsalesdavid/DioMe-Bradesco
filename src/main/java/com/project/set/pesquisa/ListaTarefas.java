@@ -2,7 +2,7 @@ package com.project.set.pesquisa;
 
 import java.util.Set;
 
-import lombok.NoArgsConstructor
+import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
 public class ListaTarefas {
