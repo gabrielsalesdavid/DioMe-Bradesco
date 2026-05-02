@@ -35,4 +35,19 @@ public class AgendaContato {
             throw new IllegalArgumentException("Contato não encontrado: " + nome);
         }
     }
+
+    public static void main(String[] args) {
+        AgendaContato contatos = new AgendaContato();
+
+        contatos.adicionarContato("Alice", 123456789);
+        contatos.adicionarContato("Bob", 987654321);
+        contatos.adicionarContato("Charlie", 555555555);
+
+        contatos.exibirContatos();
+        contatos.removerContato("Bob");
+
+        contatos.exibirContatos();
+
+        System.out.println("O número é: " + contatos.pesquisarContato("Charlie"));
+    }
 }
